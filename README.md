@@ -276,7 +276,7 @@ Delete
 
 ## `GraphQL` Method
 
-### `http://localhost:[port]/query`` (`POST`)
+### `http://localhost:[port]/query` (`POST`)
 Create a new ad.
 
 #### Request: 
@@ -302,7 +302,7 @@ mutation {
 
 ---
 
-### `http://localhost:[port]/query`` (`POST`)
+### `http://localhost:[port]/query` (`POST`)
 Get ad by `id`.
 
 #### Request: 
@@ -335,7 +335,7 @@ query{
 
 ---
 
-### `http://localhost:[port]/query`` (`POST`)
+### `http://localhost:[port]/query` (`POST`)
 Get all ads.
 
 #### Request: 
@@ -370,7 +370,7 @@ query{
 
 ---
 
-### `http://localhost:[port]/query`` (`POST`)
+### `http://localhost:[port]/query` (`POST`)
 Update ad by `id`.
 
 #### Request: 
@@ -396,7 +396,7 @@ mutation {
 
 ---
 
-### `http://localhost:[port]/query`` (`POST`)
+### `http://localhost:[port]/query` (`POST`)
 Delete ad by `id`.
 
 #### Request: 
