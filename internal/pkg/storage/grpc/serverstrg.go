@@ -134,7 +134,7 @@ func (s *StorageGrpcServer) GetAccounts(ctx context.Context, e *empty.Empty) (*a
 		return nil, err
 	}
 
-	if baseAcc == nil || len(baseAcc) == 0 {
+	if baseAcc == nil {
 		return nil, constErr.AccountBaseIsEmpty
 	}
 

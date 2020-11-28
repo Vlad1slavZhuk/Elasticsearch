@@ -27,7 +27,10 @@ func (s *Server) Login(w http.ResponseWriter, r *http.Request) {
 	}
 	w.Header().Set("Token", token)
 	w.WriteHeader(201)
-	w.Write([]byte("See in tab Headers."))
+	_, err = w.Write([]byte("See in tab Headers."))
+	if err != nil {
+		log.Println(err)
+	}
 
 }
 

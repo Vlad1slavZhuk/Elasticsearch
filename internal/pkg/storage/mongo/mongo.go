@@ -38,8 +38,14 @@ func NewMongoStorage() *MongoStorage {
 
 	quickstartDatabase := client.Database("mongo_vlad")
 
-	quickstartDatabase.CreateCollection(ctx, "accounts")
-	quickstartDatabase.CreateCollection(ctx, "ads")
+	err = quickstartDatabase.CreateCollection(ctx, "accounts")
+	if err != nil {
+		log.Fatal(err)
+	}
+	err = quickstartDatabase.CreateCollection(ctx, "ads")
+	if err != nil {
+		log.Fatal(err)
+	}
 
 	colAccs := quickstartDatabase.Collection("accounts")
 	colAds := quickstartDatabase.Collection("ads")

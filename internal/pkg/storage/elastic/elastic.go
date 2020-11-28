@@ -77,7 +77,7 @@ func NewStorageElasticSearch() *StorageElastic {
 }
 
 func (s *StorageElastic) Add(ad *data.Ad) error {
-	size, err := s.Size()
+	size, _ := s.Size()
 	ad.ID = uint(size) + 1
 	jsonAd, err := json.Marshal(ad)
 	if err != nil {
@@ -375,8 +375,6 @@ func (s *StorageElastic) Delete(id uint) error {
 			return err
 		}
 		defer resUpd.Body.Close()
-
-		newID++
 	}
 	return nil
 }
