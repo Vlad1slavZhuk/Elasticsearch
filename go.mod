@@ -5,6 +5,7 @@ go 1.15
 require (
 	github.com/99designs/gqlgen v0.13.0
 	github.com/Microsoft/go-winio v0.4.15 // indirect
+	github.com/alicebob/miniredis/v2 v2.14.1
 	github.com/aws/aws-sdk-go v1.35.20 // indirect
 	github.com/dgrijalva/jwt-go v3.2.0+incompatible
 	github.com/docker/distribution v2.7.1+incompatible // indirect
@@ -19,6 +20,7 @@ require (
 	github.com/opencontainers/go-digest v1.0.0 // indirect
 	github.com/vektah/gqlparser/v2 v2.1.0
 	github.com/xuyu/goredis v0.0.0-20160929021245-89fbe9474b37
+	github.com/yuin/gopher-lua v0.0.0-20200816102855-ee81675732da // indirect
 	go.mongodb.org/mongo-driver v1.4.3
 	google.golang.org/grpc v1.33.2
 )

@@ -33,5 +33,4 @@ var (
 	EmptyFields            = errors.New("Empty fields.")
 	TokenNotContain        = errors.New("Token not contain.")
 	NoValidToken           = errors.New("No valid token.")
-	YouRat                 = errors.New("...Ля ты крыса! (Comedy club).")
 )
