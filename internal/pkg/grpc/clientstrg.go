@@ -17,7 +17,7 @@ var port string
 
 func init() {
 	if port = os.Getenv("GRPC_PORT"); port == "" {
-		port = ":8001"
+		port = "8001"
 	}
 	port = ":" + port
 }

@@ -68,7 +68,7 @@ func (s *Server) SetStorage() {
 
 func (s *Server) Run() {
 	server := &http.Server{
-		Addr:         ":8000",
+		Addr:         s.config.PortHTTP,
 		WriteTimeout: time.Second * 15,
 		ReadTimeout:  time.Second * 15,
 		Handler:      s.router,
@@ -77,9 +77,9 @@ func (s *Server) Run() {
 	//log.Println("HTTP server launching on port " + s.config.Port)
 	//log.Fatal(http.ListenAndServe(s.config.Port, s.router))
 	go func() {
+		log.Println("Start server on localhost:", s.config.PortHTTP)
 		log.Fatal(http.ListenAndServe(s.config.PortHTTP, s.router))
 	}()
-	log.Println("Start server on localhost:", s.config.PortHTTP)
 	c := make(chan os.Signal, 1)
 	signal.Notify(c, os.Interrupt)
 
