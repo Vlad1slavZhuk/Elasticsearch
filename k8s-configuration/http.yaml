@@ -19,6 +19,8 @@ spec:
           env:
             - name: SERVER_PORT
               value: "8000"
+            - name: GRPC_PORT
+              value: "8001"
           ports:
             - containerPort: 8000
 
@@ -32,7 +34,6 @@ spec:
     app: http
   type: LoadBalancer
   ports:
-    - name: name-of-the-port
-      port: 8000
+    - port: 8000
       targetPort: 8000
       nodePort: 30000
